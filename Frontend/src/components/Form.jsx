@@ -17,7 +17,6 @@ const Form = () => {
     domains_interested:"",
     skills_known: "",
     has_laptop: false,
-    
     acknowledgement: false,
   });
 
@@ -133,14 +132,24 @@ const Form = () => {
         {/* Semester */}
         <div>
           <label className="block text-white font-orbitron tracking-wider text-lg">Semester</label>
-          <input
-            type="text"
-            name="semester"
-            value={formData.semester}
-            onChange={handleChange}
-            className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            required
-          />
+          <select
+              name="semester"
+              value={formData.semester}
+              onChange={handleChange}
+              className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              required
+            >
+              <option value="">select</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+              <option value="">7</option>
+              <option value="">8</option>
+              <option value="">passed out</option>
+            </select>
         </div>
 
         {/* DOB and Gender */}
