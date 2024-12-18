@@ -14,8 +14,10 @@ const Form = () => {
     mobile_no: "",
     father_no: "",
     aadhar: null,
+    collegeId:null,
     domains_interested:"",
     skills_known: "",
+    resume:null,
     has_laptop: false,
     acknowledgement: false,
   });
@@ -66,7 +68,7 @@ const Form = () => {
             <label className="block text-white font-orbitron tracking-wider text-lg">First Name</label>
             <input
               type="text"
-              name="firstName"
+              name="first_name"
               value={formData.first_name}
               onChange={handleChange}
               className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] px-2 rounded-lg h-8 shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -77,7 +79,7 @@ const Form = () => {
             <label className="block text-white font-orbitron tracking-wider text-lg">Last Name</label>
             <input
               type="text"
-              name="lastName"
+              name="last_name"
               value={formData.last_name}
               onChange={handleChange}
               className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -104,7 +106,7 @@ const Form = () => {
           <label className="block text-white font-orbitron tracking-wider text-lg">University Name</label>
           <input
             type="text"
-            name="universityName"
+            name="university_name"
             value={formData.university_name}
             onChange={handleChange}
             className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -113,23 +115,23 @@ const Form = () => {
         </div>
         
 
-        {/* Course and Stream */}
-        <div className="grid ">
-          <div>
-            <label className="block text-white font-orbitron tracking-wider text-lg">Course</label>
+    
+         <div className="grid ">
+           <div>
+             <label className="block text-white font-orbitron tracking-wider text-lg">department</label>
             <input
               type="text"
-              name="course"
-              value={formData.course}
+              name="department"
+              value={formData.department}
               onChange={handleChange}
               className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
               required
             />
           </div>
     
-        </div>
+        </div> 
 
-        {/* Semester */}
+      
         <div>
           <label className="block text-white font-orbitron tracking-wider text-lg">Semester</label>
           <select
@@ -140,15 +142,15 @@ const Form = () => {
               required
             >
               <option value="">select</option>
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-              <option value="">5</option>
-              <option value="">6</option>
-              <option value="">7</option>
-              <option value="">8</option>
-              <option value="">passed out</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="passed out">passed out</option>
             </select>
         </div>
 
@@ -188,7 +190,7 @@ const Form = () => {
             <label className="block text-white font-orbitron tracking-wider text-lg">Mobile Number</label>
             <input
               type="text"
-              name="mobileNo"
+              name="mobile_no"
               value={formData.mobile_no}
               onChange={handleChange}
               className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -235,21 +237,21 @@ const Form = () => {
         <div>
             <label className="block text-white font-orbitron tracking-wider text-lg">Domains Intersted</label>
             <select
-              name="domainsInterested"
-              value={formData.domainsInterested}
+              name="domains_interested"
+              value={formData.domains_interested}
               onChange={handleChange}
               className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
               required
             >
               <option value="">Select</option>
-              <option value="">Web Development</option>
-              <option value="">Ui/UX design</option>
-              <option value="">Salesforce</option>
-              <option value="">gaming(unity)</option>
-              <option value="">gaming(unreal)</option>
-              <option value="">3D Modelling/Animation</option>
-              <option value="">Digital marketing</option>
-              <option value="">Video Editing</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Ui/UX design">Ui/UX design</option>
+              <option value="Salesforce">Salesforce</option>
+              <option value="gaming(unity)">gaming(unity)</option>
+              <option value="gaming(unreal)">gaming(unreal)</option>
+              <option value="3D Modelling/Animation">3D Modelling/Animation</option>
+              <option value="Digital marketing">Digital marketing</option>
+              <option value="Video Editing">Video Editing</option>
             </select>
           </div>
         </div>
@@ -259,8 +261,8 @@ const Form = () => {
           <label className="block text-white font-orbitron tracking-wider text-lg">Skills Known</label>
           <input
             type="text"
-            name="skillsKnown"
-            value={formData.skillsKnown}
+            name="skills_known"
+            value={formData.skills_known}
             onChange={handleChange}
             placeholder="HTML,CSS,JS,REACT,FIGMA,WORDPRESS,SPLINE,BLENDER,ADOBE,ILLUSTRATOR,3JS"
             className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -285,8 +287,8 @@ const Form = () => {
           <label className="inline-flex items-center text-white font-orbitron tracking-wider text-lg">
             <input
               type="checkbox"
-              name="hasLaptop"
-              checked={formData.hasLaptop}
+              name="has_laptop"
+              checked={formData.has_laptop}
               onChange={handleChange}
               className="form-checkbox h-4 w-4 text-blue-600"
             />
