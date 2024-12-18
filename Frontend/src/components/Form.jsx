@@ -16,8 +16,8 @@ const Form = () => {
     aadhar: null,
     domains_interested:"",
     skills_known: "",
-    r: null,
-    hasLaptop: false,
+    has_laptop: false,
+    
     acknowledgement: false,
   });
 
@@ -61,14 +61,14 @@ const Form = () => {
     <div className="max-w-4xl mx-auto p-8 lg:mb-10 shadow-lg lg:shadow-slate-50 rounded-lg lg:border-2">
       <h1 className="lg:text-2xl text-[24px] font-bold mb-6 font-orbitron text-[#9DFF8E] tracking-widest">INTERN REGISTRATION FORM</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* First Name and Last Name */}
+      
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-white font-orbitron tracking-wider text-lg">First Name</label>
             <input
               type="text"
               name="firstName"
-              value={formData.firstName}
+              value={formData.first_name}
               onChange={handleChange}
               className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] px-2 rounded-lg h-8 shadow-sm focus:ring-blue-500 focus:border-blue-500"
               required
@@ -79,7 +79,7 @@ const Form = () => {
             <input
               type="text"
               name="lastName"
-              value={formData.lastName}
+              value={formData.last_name}
               onChange={handleChange}
               className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
               required
@@ -87,7 +87,7 @@ const Form = () => {
           </div>
         </div>
 
-        {/* Email */}
+     
         <div>
           <label className="block text-white font-orbitron tracking-wider text-lg">Email</label>
           <input
@@ -100,13 +100,13 @@ const Form = () => {
           />
         </div>
 
-        {/* University Details */}
+    
         <div>
           <label className="block text-white font-orbitron tracking-wider text-lg">University Name</label>
           <input
             type="text"
             name="universityName"
-            value={formData.universityName}
+            value={formData.university_name}
             onChange={handleChange}
             className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
             required
@@ -115,7 +115,7 @@ const Form = () => {
         
 
         {/* Course and Stream */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid ">
           <div>
             <label className="block text-white font-orbitron tracking-wider text-lg">Course</label>
             <input
@@ -127,17 +127,7 @@ const Form = () => {
               required
             />
           </div>
-          <div>
-            <label className="block text-white font-orbitron tracking-wider text-lg">Stream</label>
-            <input
-              type="text"
-              name="stream"
-              value={formData.stream}
-              onChange={handleChange}
-              className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-              required
-            />
-          </div>
+    
         </div>
 
         {/* Semester */}
@@ -190,7 +180,7 @@ const Form = () => {
             <input
               type="text"
               name="mobileNo"
-              value={formData.mobileNo}
+              value={formData.mobile_no}
               onChange={handleChange}
               className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
               required
@@ -200,8 +190,8 @@ const Form = () => {
             <label className="block text-white font-orbitron tracking-wider text-lg">Father's Number</label>
             <input
               type="text"
-              name="fatherNo"
-              value={formData.fatherNo}
+              name="father_no"
+              value={formData.father_no}
               onChange={handleChange}
               className="w-full border-2 text-white border-gray-300 bg-[#2C2C2C] hover:bg-[#3B3B3B] rounded-lg h-8 px-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"
               required
